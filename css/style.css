@@ -1,0 +1,140 @@
+/* Стили обнуления */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+body {
+	line-height: 1;
+	color: #fff;
+	background-color: #333;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+/* ------------------ */
+
+.header {
+	background-color: #7a956b;
+}
+.header__container {
+	max-width: 80%;
+	margin: 0px auto;
+}
+.header__menu {
+}
+.header__list {
+	font-size: 0;
+}
+.header__list > li {
+	position: relative;
+	display: inline-block;
+	margin: 0px 15px 0px 0px;
+}
+.header__list > li:hover .header__sub-list {
+	display: block;
+}
+.header__list > li:hover .header__link {
+	color: yellow;
+}
+
+.header__list > li:last-child {
+	margin-right: 0;
+}
+.header__list > li:last-child .header__sub-list {
+	left: auto;
+	right: 0;
+}
+
+.header__link {
+	font-size: 12px;
+	padding: 10px 0;
+	display: inline-block;
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.header__sub-list {
+	display: none;
+	min-width: 150px;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background-color: orange;
+	padding: 15px;
+}
+.header__sub-list li {
+	margin: 0px 0px 7px 0px;
+}
+.header__sub-list li:last-child {
+	margin-bottom: 0;
+}
+
+.header__sub-link {
+	font-size: 14px;
+	color: #fff;
+}
+.header__sub-link:hover {
+	text-decoration: underline;
+}
+
+.main {
+	padding: 30px 0px 0px 0px;
+}
+.main__container {
+	max-width: 80%;
+	margin: 0px auto;
+}
+
+.cart {
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 50%;
+	color: #fff;
+	background-color: yellowgreen;
+}
+.cart::before {
+	position: absolute;
+	line-height: 20px;
+	min-width: 20px;
+	padding: 0px 5px;
+	height: 20px;
+	right: 0;
+	top: 0;
+	background-color: red;
+	border-radius: 50%;
+	font-size: 12px;
+	content: attr(data-counter);
+}
+.cart:hover {
+	background-color: yellow;
+	color: #000;
+}
